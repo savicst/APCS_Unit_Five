@@ -3,7 +3,7 @@ public class CarTrip {
     private int myEndOdometer;
     private double myTime;
     private double myGallonsUsed;
-
+//constructors
     public CarTrip(int x, int y, double z, double zz){
         myStartOdometer = x;
         myEndOdometer = y;
@@ -30,7 +30,7 @@ public class CarTrip {
     public double getMyGallonsUsed(){
         return myGallonsUsed;
     }
-//mutators
+//setters
     public void setMyStartOdometer(int newMyStartOdometer){
         myStartOdometer = newMyStartOdometer;
     }
@@ -44,7 +44,7 @@ public class CarTrip {
         myGallonsUsed = newMyGallonsUsed;
     }
 
-//other methods
+//calculationy methods
     public int getTripDistance(){
         return (myEndOdometer-myStartOdometer);
     }
@@ -56,10 +56,17 @@ public class CarTrip {
     public double getGasMileage(){
         return (getTripDistance() / myGallonsUsed);
     }
-
     public double getTotalGasPrice(double pricePerGallon){
-      //need to round to hundredths
+      double a = myGallonsUsed * pricePerGallon;
+        a*=100;
+        a+=5;
+        a = (int)a;
+        a/=100;
         return (myGallonsUsed * pricePerGallon);
     }
 
+// to String method
+    public String toString(){
+        return "Distance traveled: " + getTripDistance() + " miles Avg. Speed: " + getAverageSpeed() + " mph Gas Mileage: " + getGasMileage() + " mpg" ;
+    }
 }
