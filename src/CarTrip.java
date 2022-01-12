@@ -62,7 +62,7 @@ public class CarTrip {
         a+=5;
         a = (int)a;
         a/=100;
-        return (myGallonsUsed * pricePerGallon);
+        return (a);
     }
 
 // to String method

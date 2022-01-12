@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CarTripTests {
 
-    /*
+
     @Test
     @Order(1)
     public void carTripConstructor() {
@@ -82,5 +82,5 @@ public class CarTripTests {
         assertEquals(expected, trip.toString());
     }
 
-     */
+
 }
