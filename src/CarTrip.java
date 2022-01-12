@@ -59,7 +59,7 @@ public class CarTrip {
     public double getTotalGasPrice(double pricePerGallon){
       double a = myGallonsUsed * pricePerGallon;
         a*=100;
-        a+=5;
+        a+=.5;
         a = (int)a;
         a/=100;
         return (a);
