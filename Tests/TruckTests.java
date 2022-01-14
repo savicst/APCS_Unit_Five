@@ -44,7 +44,7 @@ public class TruckTests {
     @Order(4)
     public void truckTestEnoughFuel() {
         assertTrue(truckTwo.enoughFuel(30));
-        assertTrue(truckTwo.enoughFuel(250));
+        assertFalse(truckTwo.enoughFuel(250));
     }
 
     @Test

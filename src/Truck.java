@@ -40,7 +40,7 @@ public class Truck {
     }
     //is there enough fuel for this trip?
     public boolean enoughFuel(double miles){
-        return (miles/mpg <= CAPACITY);
+        return (miles/mpg <= fuel);
     }
     //drive method reduces fuel, increases odometer and lets you know if you made it to your destination
     public int drive(double miles){
@@ -57,7 +57,7 @@ public class Truck {
         fuel = CAPACITY;
     }
     public int fill(double gallons){
-        if (totalFuel + gallons > CAPACITY){
+        if (fuel + gallons > CAPACITY){
             return 0;
         }
         else {
