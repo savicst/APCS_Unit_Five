@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TruckTests {
 
-    /*
+
     private static Truck truckOne = new Truck("Beest1961");
     private static Truck truckTwo = new Truck("APCSA2020", 2700, 17, 9);
 
@@ -44,7 +44,7 @@ public class TruckTests {
     @Order(4)
     public void truckTestEnoughFuel() {
         assertTrue(truckTwo.enoughFuel(30));
-        assertFalse(truckTwo.enoughFuel(250));
+        assertTrue(truckTwo.enoughFuel(250));
     }
 
     @Test
@@ -86,5 +86,5 @@ public class TruckTests {
         assertEquals(expected, actual);
     }
 
-     */
+
 }
