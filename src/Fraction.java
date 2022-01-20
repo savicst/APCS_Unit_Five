@@ -46,14 +46,13 @@ public class Fraction {
 
    //the methodical methods
     public static Fraction add(Fraction a, Fraction b){
-        int newNumerator = a.numerator + b.numerator;
-        int newDenominator = a.denominator + b.denominator;
+        int newDenominator = a.denominator * b.denominator;
+        int newNumerator = (a.numerator*b.denominator) + (b.numerator*a.denominator);
         return new Fraction(newNumerator, newDenominator);
     }
-    //!!! thats not how this works i dont think just check hold on idk maybe youre right
     public static Fraction subtract(Fraction a, Fraction b){
-        int newNumerator = a.numerator - b.numerator;
-        int newDenominator = a.denominator - b.denominator;
+        int newDenominator = a.denominator * b.denominator;
+        int newNumerator = (a.numerator*b.denominator) - (b.numerator*a.denominator);
         return new Fraction(newNumerator, newDenominator);
     }
     public static Fraction multiply(Fraction a, Fraction b){
@@ -67,7 +66,7 @@ public class Fraction {
         return new Fraction(newNumerator, newDenominator);
     }
 
-    //toString method -should change to account for whole numbers
+    //toString method
     public String toString(){
         if (Math.abs(numerator) >denominator){
             int wholeNum = numerator/denominator;
